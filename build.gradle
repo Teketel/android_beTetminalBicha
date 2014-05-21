@@ -26,12 +26,12 @@ android {
             storeFile file(System.getenv("DEBUG_KEYSTORE"))
         }
 
-        release {
-            storeFile file(System.getenv("RELESE_KEYSTORE"))
-            storePassword System.getenv("KEYSTORE_PASSWORD")
-            keyAlias System.getenv("KEY_ALIAS")
-            keyPassword System.getenv("KEY_PASSWORD")
-        }
+        //release {
+            //storeFile file(System.getenv("RELESE_KEYSTORE"))
+            //storePassword System.getenv("KEYSTORE_PASSWORD")
+            //keyAlias System.getenv("KEY_ALIAS")
+            //keyPassword System.getenv("KEY_PASSWORD")
+        //}
     }
 
 
