@@ -5,8 +5,11 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:0.9.2'
+        classpath 'com.novoda:gradle-android-command-plugin:1.2.1'
     }
 }
+
+apply plugin: 'android-command'
 
 apply plugin: 'android'
 
