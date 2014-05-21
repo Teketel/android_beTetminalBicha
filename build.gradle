@@ -17,8 +17,6 @@ android {
     lintOptions {
           abortOnError false
     }
-}
-
 
 task wrapper(type: Wrapper) {
     gradleVersion = '1.10'
@@ -28,8 +26,8 @@ task wrapper(type: Wrapper) {
 task installApk(type:Exec) {
 
   //on linux
-  //commandLine 'my_adb/install_apk_device.sh'
-    commandLine 'adb' 'install' '-r' '../build/apk/workspace-release-unsigned.apk'
+  commandLine 'my_adb/install_apk_device.sh'
+  //  commandLine 'adb', 'install', '-r', '../build/apk/workspace-release-unsigned.apk'
   //store the output instead of printing to the console:
   standardOutput = new ByteArrayOutputStream()
 
