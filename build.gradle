@@ -26,11 +26,10 @@ task wrapper(type: Wrapper) {
 }
 
 task installApk(type:Exec) {
-  workingDir 'my_adb/'
-  
-  //on linux
-  commandLine './install_apk_device.sh'
 
+  //on linux
+  //commandLine 'my_adb/install_apk_device.sh'
+    commandLine 'adb' 'install' '-r' '../build/apk/workspace-release-unsigned.apk'
   //store the output instead of printing to the console:
   standardOutput = new ByteArrayOutputStream()
 
@@ -40,10 +39,8 @@ task installApk(type:Exec) {
 }
 
 task startMainActivity(type:Exec) {
-  workingDir 'my_adb/'
-  
-  //on linux
-  commandLine './start_main_activity.sh'
+ //on linux
+  commandLine 'my_adb/start_main_activity.sh'
   standardOutput = new ByteArrayOutputStream()
   ext.output = {
     return standardOutput.toString()
@@ -51,10 +48,8 @@ task startMainActivity(type:Exec) {
 }
 
 task uninstallApk(type:Exec) {
-  workingDir 'my_adb/'
-  
-  //on linux
-  commandLine './uninstall_apk_device.sh'
+ //on linux
+  commandLine 'my_adb/uninstall_apk_device.sh'
   standardOutput = new ByteArrayOutputStream()
   ext.output = {
     return standardOutput.toString()
