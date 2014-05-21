@@ -36,7 +36,7 @@ task installApk(type:Exec) {
   }
 }
 
-task startMainActivity(type:Exec, dependsOn: installDebug) {
+task startMainActivity(type:Exec) {
  //on linux
   commandLine 'my_adb/start_main_activity.sh'
   standardOutput = new ByteArrayOutputStream()
