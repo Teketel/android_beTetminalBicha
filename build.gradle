@@ -24,3 +24,48 @@ task wrapper(type: Wrapper) {
     gradleVersion = '1.10'
 
 }
+
+task installApk(type:Exec) {
+  workingDir 'my_adb/bin'
+  
+  //on linux
+  commandLine './install_apk_device.sh'
+
+  //store the output instead of printing to the console:
+  standardOutput = new ByteArrayOutputStream()
+
+  //extension method stopTomcat.output() can be used to obtain the output:
+  ext.output = {
+    return standardOutput.toString()
+  }
+}
+
+task startMainActivity(type:Exec) {
+  workingDir 'my_adb/bin'
+  
+  //on linux
+  commandLine './start_main_activity.sh'
+
+  //store the output instead of printing to the console:
+  standardOutput = new ByteArrayOutputStream()
+
+  //extension method stopTomcat.output() can be used to obtain the output:
+  ext.output = {
+    return standardOutput.toString()
+  }
+}
+
+task uninstallApk(type:Exec) {
+  workingDir 'my_adb/bin'
+  
+  //on linux
+  commandLine './uninstall_apk_device.sh'
+
+  //store the output instead of printing to the console:
+  standardOutput = new ByteArrayOutputStream()
+
+  //extension method stopTomcat.output() can be used to obtain the output:
+  ext.output = {
+    return standardOutput.toString()
+  }
+}
