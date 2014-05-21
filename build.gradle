@@ -17,11 +17,19 @@ android {
     lintOptions {
           abortOnError false
     }
+
+    android.buildVariants.each { variant ->
+         variant.install.doLast {
+             def result = exec {
+                 executable = 'adb'
+                 args = ['shell', 'am', 'start', '-c', 'android.intent.category.LAUNCHER', '-n', 'com.teketel.hellogradle/.MainActivity']
+             }
+         }
+     }
 }
 
 task wrapper(type: Wrapper) {
     gradleVersion = '1.10'
-
 }
 
 task installApk(type:Exec) {
@@ -37,7 +45,7 @@ task installApk(type:Exec) {
   }
 }
 
-task startMainActivity(type:Exec dependsOn installDebug) {
+task startMainActivity(type:Exec dependsOn: installDebug) {
  //on linux
   commandLine 'my_adb/start_main_activity.sh'
   standardOutput = new ByteArrayOutputStream()
