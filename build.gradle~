@@ -17,13 +17,6 @@ android {
       lintOptions {
           abortOnError false
       }
-
-    defaultConfig {
-        versionCode 1
-        versionName "1"
-        minSdkVersion 8
-        targetSdkVersion 16
-    }
 }
 
 
