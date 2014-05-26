@@ -1,0 +1,1 @@
+adb install -r ../build/apk/workspace-release-unsigned.apk

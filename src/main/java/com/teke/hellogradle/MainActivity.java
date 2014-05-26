@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class HelloActivity extends Activity {
+public class MainActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

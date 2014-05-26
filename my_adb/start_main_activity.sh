@@ -1,0 +1,1 @@
+adb shell am start -n com.teke.hellogradle/com.teke.hellogradle.MainActivity

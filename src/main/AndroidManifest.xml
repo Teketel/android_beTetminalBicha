@@ -6,7 +6,7 @@
 
     <application android:label="@string/app_name" >
         <activity
-            android:name=".MainActivity"
+            android:name="com.teke.hellogradle.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
