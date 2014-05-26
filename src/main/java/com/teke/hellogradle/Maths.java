@@ -1,7 +1,7 @@
 
 package com.teke.hellogradle;
 
-public class Maths extends {
+public class Maths {
 
 	public int sumOf(int x, int y) {
 		return x + y;
