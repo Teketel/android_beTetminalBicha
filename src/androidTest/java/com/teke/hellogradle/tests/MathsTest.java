@@ -17,7 +17,7 @@ public class MathsTest extends AndroidTestCase {
 
 	public void testAdd() {
 		int result = mMaths.sumOf(23, 32);
-		assertEquals(5, result);
+		assertEquals(55, result);
 	}
 
 	@Override
