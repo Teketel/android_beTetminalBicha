@@ -20,6 +20,11 @@ public class MathsTest extends AndroidTestCase {
 		assertEquals(55, result);
 	}
 
+	public void testMultiply() {
+		int result = mMaths.productOf(3, 32);
+		assertEquals(96, result);
+	}
+
 	@Override
 	public void tearDown() throws Exception {
 		super.tearDown();

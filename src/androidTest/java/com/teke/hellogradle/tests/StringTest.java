@@ -14,7 +14,7 @@ public class StringTest extends AndroidTestCase {
         mString = new StringStuff();
     }
 
-    public void testAdd() {
+    public void testStringSwitch() {
         String[] result = mString.stringSwitch("Hello", "there");
         assertTrue("Hello" == result[1]);
     }
